@@ -8,5 +8,5 @@ urlpatterns = [
     path ('florida', TemplateView.as_view(template_name='florida.html'), name='florida'),
     path ('casique', TemplateView.as_view(template_name='casique.html'), name='casique'),
     path ('caracoli', TemplateView.as_view(template_name='caracoli.html'), name='caracoli'),
-    
+    path ('megamall', TemplateView.as_view(template_name='megamall.html'), name='megamall'),
 ]

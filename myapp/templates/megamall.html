@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Centro Comercial Megamall</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <header class="navbar">
+    <nav class="nav-container">
+      <a href="index.html">Inicio</a>
+      <div class="dropdown">
+        <button class="dropbtn">Centros Comerciales ▾</button>
+        <div class="dropdown-content">
+          <a href="cacique.html">Cacique</a>
+          <a href="florida.html">La Florida</a>
+          <a href="caracoli.html">Parque Caracolí</a>
+          <a href="megamall.html">Megamall</a>
+        </div>
+      </div>
+      <a href="contacto.html">Contáctenos</a>
+    </nav>
+  </header>
+
+  <main class="contenido">
+    <section>
+      <h1>Centro Comercial Megamall</h1>
+      <p>
+        Megamall está ubicado en una zona de alta afluencia estudiantil y profesional. Cuenta con salas de cine, supermercado, zona de comidas, gimnasio Smart Fit y espacios para trabajar o relajarse. Es un centro comercial versátil y moderno que combina comercio, servicios y entretenimiento.
+      </p>
+      <img class="imagen" src="https://www.megamall.com.co/galepages/mac_gal_quienes_somos_1573062164.JPG" alt="Megamall">
+    </section>
+    <section class="seccion" id="megamall">
+        <p><h2>DOLLAR CITY</h2>Compra de todo tipo de Articulos para el hogar</p>
+        </section>
+        <section class="seccion" id="megamall">
+        <p><h2>SPRING</h2>Colchones Spring es la fábrica de colchones con mayor trayectoria en el mercado colombiano, con 60 años de experiencia es la empresa líder de la categoría. Es una compañía productora y comercializadora de soluciones innovadoras para el buen descanso. </p>
+        </section>
+        <section class="seccion" id="megamall">
+        <p><h2>VELEZ</h2>élez fue creada en 1986 con un concepto innovador y creativo.  La idea fue crear accesorios de moda, en cuero, con un look contemporáneo y detalles artesanales que hicieran que se destacaran.</p>
+        </section>
+  </main>
+</body>
+</html>
