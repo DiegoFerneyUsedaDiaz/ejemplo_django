@@ -1,7 +1,8 @@
 
 from django.urls import path
 from django.views.generic import TemplateView
-
+from .views import lista_centros_comerciales
+from myapp import views
 
 urlpatterns = [
     path ('', TemplateView.as_view(template_name='home.html'), name='home'),
@@ -9,4 +10,5 @@ urlpatterns = [
     path ('casique', TemplateView.as_view(template_name='casique.html'), name='casique'),
     path ('caracoli', TemplateView.as_view(template_name='caracoli.html'), name='caracoli'),
     path ('megamall', TemplateView.as_view(template_name='megamall.html'), name='megamall'),
+    path ('centros_comerciales', views.lista_centros_comerciales, name='lista_centros_comerciales'),
 ]

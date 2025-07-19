@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+  </head>
+  <body>
+        <table>
+          <tbody>
+            <th>
+                nombre
+            </th>
+            <th>
+                ciudad
+            </th>
+          </tbody>
+    {% for  centros_comercial in centros_comerciales %}
+        
+              <tr>
+                <td>
+                    {{centros_comercial.nombre}}
+                </td>
+                <td>
+                    {{centros_comercial.ciudad}}
+                </td>
+              </tr>
+  
+     {% endfor %}
+    
+    <script src="" async defer></script>
+  </body>
+</html>
