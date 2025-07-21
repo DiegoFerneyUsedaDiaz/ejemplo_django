@@ -8,6 +8,7 @@ class CentroComercial(models.Model):
     direccion = models.CharField(max_length=255)
     telefono = models.CharField(max_length=15, blank=True, null=True)
     descripcion = models.TextField(blank=True, null=True)
+    url = models.URLField(blank=True, null=True)
 
     def __str__(self):
         return self.nombre
@@ -21,6 +22,7 @@ class Tienda(models.Model):
     categoria = models.CharField(max_length=50)
     horario_apertura = models.TimeField()
     horario_cierre = models.TimeField()
+    url = models.URLField(blank=True, null=True)
 
     def __str__(self):
         return f"{self.nombre} ({self.categoria}) - {self.centro_comercial.nombre}"
