@@ -11,6 +11,6 @@ urlpatterns = [
     path ('caracoli', TemplateView.as_view(template_name='caracoli.html'), name='caracoli'),
     path ('megamall', TemplateView.as_view(template_name='megamall.html'), name='megamall'),
     path ('centros_comerciales', views.lista_centros_comerciales, name='lista_centros_comerciales'),
-    path('tiendas', views.lista_centros_tiendas, name='lista_centros_tiendas'),
+    path('tiendas', views.lista_centros_tiendas, name='lista_tiendas'),
     path('cc/<str:name_cc>', views.vista_centros_comercial, name='vista_centros_comercial' ),
 ]
