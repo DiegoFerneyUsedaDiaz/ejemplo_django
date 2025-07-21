@@ -22,7 +22,7 @@
           <div class="col-md-4">
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title">{{ centros_comercial.nombre}}</h5>
+                <a href="{% url 'myapp:vista_centros_comercial' centros_comercial.nombre%}" class="card-title">{{ centros_comercial.nombre}}</a>
                 <p class="card-text">se encuentra ubicado en {{ centros_comercial.descripcion }} </p>
               <a href="{{ centros_comercial.url}}" target="_blank" class="btn btn-success">Visitar sitio web</a>
                 </div>

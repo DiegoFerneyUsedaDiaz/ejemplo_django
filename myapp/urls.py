@@ -4,6 +4,7 @@ from django.views.generic import TemplateView
 from .views import lista_centros_comerciales
 from myapp import views
 
+app_name = 'myapp'
 urlpatterns = [
     path ('', TemplateView.as_view(template_name='home.html'), name='home'),
     path ('florida', TemplateView.as_view(template_name='florida.html'), name='florida'),
