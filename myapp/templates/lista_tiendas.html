@@ -24,6 +24,7 @@
             <h5 class="card-title" style="color: rgb(53, 53, 53);">{{ tienda.nombre }}</h5>
             <p class="card-text"> se encuentra la categoria: {{ tienda.categoria }} </p>
             <p class="card-text"> ubicacion: {{ tienda.centro_comercial }} </p>
+            <p class="card-text">quienes somos:  {{ tienda.descripcion }} </p>
             {% if tienda.url %}
               <a href="{{ tienda.url }}" target="_blank" class="btn btn-success">Pagina Oficial</a>
             {% endif %}

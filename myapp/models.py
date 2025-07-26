@@ -23,6 +23,8 @@ class Tienda(models.Model):
     horario_apertura = models.TimeField()
     horario_cierre = models.TimeField()
     url = models.URLField(blank=True, null=True)
+    descripcion = models.TextField(blank=True, null=True)
+    
 
     def __str__(self):
         return f"{self.nombre} ({self.categoria}) - {self.centro_comercial.nombre}"
