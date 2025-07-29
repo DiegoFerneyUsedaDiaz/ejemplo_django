@@ -14,3 +14,6 @@ def vista_centros_comercial(request, name_cc):
     centro_comercial = CentroComercial.objects.get(nombre=name_cc)
     tiendas = centro_comercial.tiendas.all()
     return render(request, 'vista_centros_comercial.html', {'centro_comercial': centro_comercial, 'tiendas': tiendas})
+
+def profile(request):
+    return render(request, 'usuario.html')
