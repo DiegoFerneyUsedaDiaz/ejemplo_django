@@ -34,7 +34,7 @@
 <div class="modal fade" id="updateInfoModal" tabindex="-1" aria-labelledby="updateInfoModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form method="POST">
+            <form method="POST" >
                 {% csrf_token %}
                 <div class="modal-header">
                     <h5 class="modal-title" id="updateInfoModalLabel">Actualizar Información</h5>
@@ -72,6 +72,31 @@
     .addEventListener("click", function () {
       var modal = new bootstrap.Modal(document.getElementById('updateInfoModal'));
       modal.show();
+    });
+    document.querySelector('form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission
+        var formData = new FormData(this);
+
+        fetch(this.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'X-CSRFToken': formData.get('csrfmiddlewaretoken')
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                console.log('Information updated successfully');
+                setTimeout(() => {
+                    location.reload(); // Refresh the page after 1 second
+                }, 1000);
+            } else {
+                console.error('Failed to update information');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
     });
 </script>
 {% endblock %}
